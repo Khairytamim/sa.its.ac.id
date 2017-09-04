@@ -1,0 +1,12 @@
+Upgrade guide From Rahmad:
+
+1. Buat table m_setting;
+
+CREATE TABLE IF NOT EXISTS `m_setting` (
+`setting_id` int(11) NOT NULL,
+  `setting_nama_unit` varchar(255) NOT NULL,
+  `setting_detail_unit` varchar(255) NOT NULL,
+  `setting_email_unit` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+2.

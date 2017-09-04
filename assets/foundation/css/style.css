@@ -1,0 +1,288 @@
+.logo-event{
+	top: -28px;
+    width: 110px;
+    position: absolute;
+}
+
+.panel-header{
+	padding:5px 0 5px 10px;
+	background:#4a4a4a;
+	color:white;
+}
+
+.artikel-container{
+	padding-left: 10px;
+	padding-right: 8px;
+	padding-top: 10px;
+}
+
+article p img{
+	width: 100%;
+}
+
+article p {
+	font-size: 14px;
+}
+article ol li {
+	font-size: 14px;
+}
+
+article ul li {
+	font-size: 14px;
+}
+
+.langs {
+	text-align: right;
+}
+
+.search input[type="text"] {
+	height: 30px;
+	border:none;
+	width:127px;
+
+}
+
+.side-nav li {
+    font-size: 0.77778rem;
+    font-weight: normal;
+    margin: 0 0 0.38889rem 0; }
+
+/* QUICK LINK */
+
+.flip-container {
+	width: 98px;
+	height: 73px;
+}
+
+.front{
+    background-color: #ccc;
+}
+
+.back{
+	color:white;
+    background: url("../img/quicklink.png") center center no-repeat;
+}
+
+.text-description{
+	padding-left: 6px;
+	text-align: center;
+	width: 93px;
+	height: 73px;
+	display:table-cell;
+	vertical-align:middle;
+	text-transform: uppercase;
+}
+
+
+/* END QUICK LINK */
+
+#ok {
+	color: #4a4a4a;
+	width: 30px;
+	height: 30px;
+	border: none;
+	padding:0;
+	background-color: white;
+}
+
+footer {
+	margin-top: 50px;
+	padding-top: 20px;
+	padding-bottom:20px;
+	background: #f5f5f5;
+	/*background: red;*/
+	color: rgb(102, 102, 102);
+
+}
+
+
+.panel-header{
+	border-radius: 3px 3px 0 0;
+}
+
+#pengumuman {
+	background: white;
+	padding: 0 ;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+#agenda {
+	background: white;
+	padding: 0 ;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+.clear {
+	clear: both;
+}
+
+.positionTitle {
+	font-size: 14px;
+}
+
+.location {
+	display: block;
+	font-size: 11px;
+	color: #666;
+}
+
+
+
+body {
+	background: url("../img/Theme-Science.png") top center repeat-y;
+}
+
+#side-nav {
+	text-transform: uppercase;
+}
+
+#side-nav li a {
+	color:#4a4a4a;
+}
+
+#side-nav li a:hover {
+	color:#008cba;
+}
+
+article {
+	padding:5px;
+}
+
+/* Small screens*/
+@media only screen and (max-width: 40em) {
+	#content {
+		margin-top:20px;
+		background: white;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	footer {
+		padding-right: 10px;
+		padding-top: 10px;
+	}
+	.logo {
+		background: url("../img/octagon.png") 0 0 no-repeat;
+		top: -10px;
+		left: -160px;
+		position: absolute;
+		width: 553px;
+		height: 245px;
+	}
+	.logo-gmb {
+		background: url("../img/logo-its.png") 0 0 no-repeat;
+		width: 553px;
+		height: 245px;
+	}
+}
+
+/* Medium screens*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#content {
+		margin-top:20px;
+		background: white;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	footer {
+		padding-right: 10px;
+		padding-top: 10px;
+	}
+
+	.logo {
+		background: url("../img/octagon.png") 0 0 no-repeat;
+		top: -10px;
+		left: -160px;
+		position: absolute;
+		width: 553px;
+		height: 245px;
+	}
+	.logo-gmb {
+		background: url("../img/logo-its.png") 0 0 no-repeat;
+		position: absolute;
+		width: 553px;
+		height: 245px;
+	}
+
+}
+
+/* XLarge screens*/
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	#sidebar {
+		margin-top: 130px;
+
+	}
+
+	#content {
+		margin-top:50px;
+		background: white;
+		padding-top: 10px;
+		border-radius: 5px;
+		padding-bottom: 10px;
+		float:right;
+	}
+
+	#header {
+		margin-top: 60px ;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.logo {
+		background: url("../img/octagon.png") 0 0 no-repeat;
+		top: -10px;
+		left: -160px;
+		position: absolute;
+		width: 553px;
+		height: 245px;
+	}
+	.logo-gmb {
+		background: url("../img/logo-its-white.png") 0 0 no-repeat;
+		position: absolute;
+		left : 13em;
+		top : 3em;
+		width: 553px;
+		height: 245px;
+	}
+}
+
+
+/* XLLarge screens*/
+@media only screen and (min-width: 90.063em){
+	#sidebar {
+		margin-top: 130px;
+	}
+
+	#content {
+		float:right;
+		margin-top:50px;
+		background: white;
+		padding-top: 10px;
+		border-radius: 5px;
+		padding-bottom: 10px;
+	}
+
+	#header {
+		margin-top: 60px ;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.logo {
+		background: url("../img/octagon.png") 0 0 no-repeat;
+		top: -10px;
+		left: -160px;
+		position: absolute;
+		width: 553px;
+		height: 245px;
+	}
+	.logo-gmb {
+		background: url("../img/logo-its.png") 0 0 no-repeat;
+		width: 553px;
+		height: 245px;
+	}
+
+}

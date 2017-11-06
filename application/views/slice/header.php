@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="<?php echo base_url('index.php/home');?>" target="_blank">Lihat Website</a>
+    <a class="navbar-brand" href="<?php echo base_url('index.php/home');?>" target="_blank">Halaman Admin Senat ITS</a>
 </div>
 <!-- Top Menu Items -->
 <ul class="nav navbar-right top-nav">

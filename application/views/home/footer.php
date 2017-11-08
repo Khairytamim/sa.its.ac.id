@@ -8,19 +8,19 @@
         </div>
 
         <div class="large-6 medium-3 small-3 columns show-for-large-up text-center" style="padding-top:20px;">
-          <span>Copyright ©<br /> Lembaga Pengembangan Teknologi Sistem Informasi  ITS</span>
+          <a href="" class="button small">Developed By</a><span><br />Copyright © Senat Akademik ITS</span>
         </div>
 
 
         <div class="large-3 medium-6 small-6 columns">
-        <div class="row" style="padding-top:20px;" >
+        <!-- <div class="row" style="padding-top:20px;" >
           <ul class="inline-list right" style="margin:0 !important;">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
           </ul>
-        </div>
-        <div class="row">
+        </div> -->
+        <div class="row" style="padding-top:45px;" >
           <span class="right">email : <?php echo strtolower($setting->row('setting_email_unit'));?></span>
         </div>
         </div>

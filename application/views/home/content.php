@@ -1,7 +1,6 @@
  <?php if(count($content)){?>
  <aside class="large-8 medium-12 small-12 columns" role="content" id="content" style="padding-bottom:30px;">
-
-
+  <center><img src="http://sa.its.ac.id/upload/Selamat datang senat.png" alt="" /></center>
     <?php $i = 0; ?>
     <?php foreach($content as $r){ ?>
         <?php $i++; ?>
@@ -12,7 +11,7 @@
           <h3><a href="#"><?php echo $r->judul_ing;?></a></h3>
 
           <?php if(isset($date)){ ?>
-              <h6>Post by <a href="#"><?php  echo $r->users_nama;?></a> on <?php echo date('F j, Y.',strtotime($r->artikel_time));?></h6>
+              <p>Post by <a href="#"><?php  echo $r->users_nama;?></a> on <?php echo date('F j, Y.',strtotime($r->artikel_time));?></p>
           <?php } ?>
 
           <p>
@@ -32,9 +31,7 @@
         <article >
 
           <h3><a href="#"><?php echo $r->judul_ind;?></a></h3>
-          <?php if(isset($date)){ ?>
-              <h6>Post by <a href="#"><?php  echo $r->users_nama;?></a> on <?php echo date('F j, Y.',strtotime($r->artikel_time));?></h6>
-          <?php } ?>
+          
           <p>
               <?php $str = explode("{ellipsis}",$r->artikel_ind);?>
               <?php if(count($str) > 1){ ?>
@@ -44,6 +41,9 @@
               <?php } ?>
 
           </p>
+          <?php if(isset($date)){ ?>
+              <p style="margin:0">Post by <a href="#"><?php  echo $r->users_nama;?></a> on <?php echo date('F j, Y.',strtotime($r->artikel_time));?></p>
+          <?php } ?>
 
         </article>
 

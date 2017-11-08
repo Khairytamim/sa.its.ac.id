@@ -16,6 +16,7 @@ class Page extends CI_Controller {
 		$this->load->model('m_artikel');
 		$this->load->model('m_agenda');
 		$this->load->model('m_sidebar');
+		$this->load->model('m_upload');
 		$this->load->model('m_quicklink');
 		$this->load->model('m_setting');
 		$this->load->library('template');
@@ -91,7 +92,7 @@ class Page extends CI_Controller {
 
 	private function recursive($obj){
 		$this->sidebar .= "<div id='cssmenu'><ul>";
-		$this->sidebar .= "<li><a href='".base_url()."'><span>HOME</span></a></li>";
+		$this->sidebar .= "<li><a href='".base_url()."'><span>haha</span></a></li>";
 		foreach ($obj->result() as $k) {
 			$src   = base_url('index.php/site/'.$k->keyword);
 			if($this->session->userdata('bahasa') == 'eng'){

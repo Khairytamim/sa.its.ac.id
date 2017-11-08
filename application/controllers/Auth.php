@@ -27,8 +27,8 @@ class Auth extends CI_Controller {
 
 	private function _login(){
 		$username = $this->input->post('users_nama');
-		// $password = md5('kuM1nt4!'.$this->input->post('users_password'));
-		$password = $this->input->post('users_password');
+		$password = md5('kuM1nt4!'.$this->input->post('users_password'));
+		// $password = $this->input->post('users_password');
 
 		$data  = array($username,$password);
 		$sql   = $this->m_users->_login();

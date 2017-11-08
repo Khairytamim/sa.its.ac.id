@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/nav_vertical.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/nanoscroller.css');?>">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <style type="text/css">
     .nano { height: 270px; }
     .nano .nano-slider { background: #111; }
@@ -20,7 +21,7 @@
         display: table;
     }
 
-    .event-date {
+    .event-date { 
       display: table-cell;
     }
   .event-date .event-month {
@@ -55,7 +56,7 @@
 
     </style>
  </head>
- <body>
+ <body style="font-family: 'Source Sans Pro', sans-serif;">
 
 
  <!-- START MOBILE DESAIN -->

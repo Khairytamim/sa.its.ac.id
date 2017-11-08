@@ -22,9 +22,9 @@
         <li class="<?php echo @$upload;?>">
             <a href="<?php echo base_url('index.php/upload');?>"><i class="fa fa-cloud-upload"></i> Upload</a>
         </li>
-        <li class="<?php echo @$setting;?>">
+       <!--  <li class="<?php echo @$setting;?>">
             <a href="<?php echo base_url('index.php/setting');?>"><i class="fa fa-laptop"></i> Setting</a>
-        </li>
+        </li> -->
     </ul>
 </div>
 <!-- /.navbar-collapse -->

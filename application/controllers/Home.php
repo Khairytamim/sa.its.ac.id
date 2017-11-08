@@ -14,6 +14,7 @@ class Home extends CI_Controller {
 		$this->load->model('m_artikel');
 		$this->load->model('m_pengumuman');
 		$this->load->model('m_agenda');
+		$this->load->model('m_upload');
 		$this->load->model('m_sidebar');
 		$this->load->model('m_quicklink');
 		$this->load->model('m_setting');
@@ -83,12 +84,14 @@ class Home extends CI_Controller {
 
 	public function site(){
 		$id   		= $this->uri->segment(2);
-
+		// echo $id;
 		$sql        = $this->m_artikel->getDataByRequest().' order by artikel_time desc';
 
 		$artikel    = $this->db->query($sql,array($id));
+		// var_dump($artikel);
 		$sidebar_id = $this->m_setting->getCheckAuth($artikel->row('sidebar_id'));
-
+		$pdf		= $this->m_upload->getPdf();
+		$photo		= $this->m_upload->getPhoto();
 		$sql   	    = $this->m_pengumuman->getAll();
 		$pengumuman = $this->db->query($sql);
 		$sql        = $this->m_agenda->getAll();
@@ -97,6 +100,25 @@ class Home extends CI_Controller {
 		$sidebarMobile = $this->sidebarMobile();
 		$sql        = $this->m_quicklink->getAll();
 		$quicklink  = $this->db->query($sql);
+
+		if ($id == 'notulensirapat' || $id == 'galeri') {
+
+			$arr['content']    = $this->db->query(($id == 'notulensirapat') ? $pdf : $photo)->result();
+			$arr['pengumuman'] = $pengumuman->result();
+			$arr['agenda']	   = $agenda->result();
+			$arr['sidebar']	   = $sidebar;
+			$arr['sidebarMobile'] = $sidebarMobile;
+			$arr['quicklink']  = $quicklink->result();
+			$arr['setting']	   = $this->m_setting->getData();
+			$arr['hr']		   = "<hr />";
+			$arr['pagination'] = "";
+			// echo (count($arr['content']));
+			// echo "rapat";
+			// var_dump($arr['content']);
+			$this->template->setContent('home/file');
+			$this->template->display($arr);
+			return; //keluar dari semua fungsi
+		}
 
 		if($this->session->userdata('artikel') != $id){
 			$this->session->unset_userdata('artikel');
@@ -214,13 +236,13 @@ class Home extends CI_Controller {
 	private function sidebar(){
 		$sql   = $this->m_sidebar->tampilan();
 		$query = $this->db->query($sql);
-		$this->sidebar = '';
+		// $this->sidebar = '';
 		// $this->recursive($query->result(), $query->num_rows(), 0 );
 		$this->recursive($query);
 		return $this->sidebar;
 
 	}
-
+	//detail sidebar
 	private function recursive($obj){
 		$this->sidebar .= "<div id='cssmenu'><ul>";
 		$this->sidebar .= "<li><a href='".base_url()."'><span>HOME</span></a></li>";

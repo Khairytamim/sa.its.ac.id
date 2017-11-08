@@ -33,6 +33,16 @@ class M_upload extends CI_Model {
 		return $this->sql;
 	}
 
+	public function getPdf(){
+		$this->sql = "SELECT * FROM ".$this->table." where upload_ext = 'pdf' order by upload_time desc";
+		return $this->sql;
+	}
+
+	public function getPhoto(){
+		$this->sql = "SELECT * FROM ".$this->table." where upload_ext in ('jpg','png') order by upload_time desc";
+		return $this->sql;
+	}
+
 	public function getAll(){
 		$this->sql = "SELECT * FROM ".$this->table." ORDER BY upload_id DESC ";
 		return $this->sql;

@@ -36,7 +36,8 @@
            <div class="event-desc">
 
 
-            <a href="<?php echo base_url('upload/'.$p->pengumuman_ing);?>" target="_blank">
+            <!-- <a href="<?php echo base_url('upload/'.$p->pengumuman_ing);?>" target="_blank"> -->
+            <a>
              <?php if($this->session->userdata('bahasa') == 'eng'){ ?>
              <p class="event-desc-detail"><?php echo strtoupper($p->judul_ing); ?></p>
              <?php } else { ?>
@@ -78,7 +79,7 @@
               <div class="event-desc">
 
 
-               <a href="<?php echo base_url('index.php/page/agenda/'.$p->agenda_id);?>">
+               <a href="<?php echo base_url('index.php/page/agenda/'.$p->agenda_id);?>" target="_blank">
                 <?php if($this->session->userdata('bahasa') == 'eng'){ ?>
                 <p class="event-desc-detail"><?php echo strtoupper($p->judul_ing); ?></p>
                 <?php } else { ?>

@@ -53,8 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-// $config['base_url'] = 'http://sa.its.ac.id/';
-$config['base_url'] = 'http://localhost/sa.its.ac.id';
+$config['base_url'] = 'http://sa.its.ac.id/';
+//$config['base_url'] = 'http://localhost/sa.its.ac.id';
 
 /*
 |--------------------------------------------------------------------------
